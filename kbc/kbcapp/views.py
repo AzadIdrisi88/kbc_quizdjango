@@ -31,6 +31,8 @@ def quiz(request):
             print("Wrong")
         n=len(rewards)
         print(n)
+        print(type(rewards))
+        
         
         for i in range(n):
             print(i)
