@@ -30,11 +30,11 @@ def quiz(request):
             return render(request, "end.html")
             print("Wrong")
         n=len(rewards)
-        print(n)
-        print(type(rewards))
-        
-        
         for i in range(n):
+            if qno!=i+1:
+                rewards[i]['class']=''
+            else:
+                rewards[i]['class']='highlight'
             print(i)
             
     url = "https://gist.githubusercontent.com/AzadIdrisi88/5ee4683ecf3cbdc2cc63e2ea41448021/raw/26f28474e05a3dd2d1ef94a1fce5a7ba22462534/kbc_quiz"
